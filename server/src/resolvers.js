@@ -4,7 +4,6 @@ const resolvers = {
             return dataSources.trackAPI.getStadiums();
         }
     }
-
 };
 
 module.exports = resolvers;
