@@ -3,7 +3,7 @@ const { gql } = require('apollo-server');
 const typeDefs = gql`
 type Query {
     "Query for retrieving all the stadiums in the NFL"
-    stadiums:[Stadium!]!
+    getStadiums:[Stadium!]
 }
 
 "A stadium"
