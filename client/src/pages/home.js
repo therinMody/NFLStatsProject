@@ -1,11 +1,15 @@
 import React from 'react';
 //import { useQuery, gql } from '@apollo/client';
 //import TrackCard from '../containers/track-card';
-//import { Layout, QueryResult } from '../components';
+import { Layout } from '../components';
 
 
 const Home = () => {
-    return <h1>Hello World!</h1>;
+    return (
+        <Layout>
+
+        </Layout>
+    );
 };
 
 export default Home;
