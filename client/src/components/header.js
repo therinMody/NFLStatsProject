@@ -21,8 +21,7 @@ const HeaderBar = styled.div({
     textAlign: 'center',
     fontFamily: 'monospace',
     fontSize: '200%',
-    border: '2px dotted #FFDA00',
-    borderRadius: '100px',
+    border: '2px solid',
 });
 
 const Container = styled.div({

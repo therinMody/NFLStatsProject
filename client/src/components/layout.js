@@ -1,5 +1,5 @@
 import React from 'react';
-import { Header, Footer } from '../components';
+import { Header, Footer, Menu } from '../components';
 //import styled from '@emotion/styled';
 
 /*
@@ -9,6 +9,8 @@ const Layout = () => {
     return (
         <>
             <Header />
+
+            <Menu />
 
             <Footer />
         </>
