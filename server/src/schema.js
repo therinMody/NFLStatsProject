@@ -27,6 +27,8 @@ type Team {
     Division: String!
     Conference: String!
     WikipediaLogoUrl: String!
+    PrimaryColor: String!
+    SecondaryColor: String!
 }
 `;
 

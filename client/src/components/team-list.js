@@ -14,23 +14,28 @@ const TEAMS = gql`
             Division
             Conference
             WikipediaLogoUrl
+            PrimaryColor
+            SecondaryColor
         }
     }
 `;
 
 const TeamList = () => {
     const { loading, error, data } = useQuery(TEAMS);
-    console.log(data);
 
     return (
+
+        <>
+
         <TeamContainer>
-            <h1>{data}...</h1>
             <QueryData loading={loading} error={error} data={data}>
-                {data?.getTeams?.map((team, index) => (
+                {data?.getTeams?.map((team) => (
                     <TeamCard key={team.Key} team={team} />
                 ))}
             </QueryData>
         </TeamContainer>
+
+        </>
     );
 
 };
@@ -39,8 +44,12 @@ export default TeamList;
 
 const TeamContainer = styled.div({
     width: '56%',
-    backgroundColor: '#000000',
+    backgroundColor: '#141414',
     color: '#FFFFFF',
     float: 'right',
-    
+    height: 'fit-content',
+    marginBottom: '10%',
+    marginTop: '1%',
+    textAlign: 'center',
+    marginRight: '3%',
 });
