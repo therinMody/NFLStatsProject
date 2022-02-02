@@ -9,13 +9,13 @@ class TrackAPI extends RESTDataSource {
     }
 
     //returns a list of stadiums
-    async getStadiums() {
-        return await this.get("Stadiums?key="+process.env.REACT_APP_SPORTS_DATA_API_KEY);
+    getStadiums() {
+        return this.get("Stadiums?key="+process.env.REACT_APP_SPORTS_DATA_API_KEY);
     }
 
     //returns a list of teams
-    async getTeams() {
-        return await this.get("Teams?key="+process.env.REACT_APP_SPORTS_DATA_API_KEY);
+    getTeams() {
+        return this.get("Teams?key="+process.env.REACT_APP_SPORTS_DATA_API_KEY);
     }
 }
 

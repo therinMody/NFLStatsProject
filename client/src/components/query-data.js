@@ -7,6 +7,7 @@ import styled from '@emotion/styled';
  */
 const QueryData = ({ loading, error, data, children}) => {
   if (error) {
+    console.log(error);
     return <p>ERROR: {error.message}</p>;
   }
   if (loading) {

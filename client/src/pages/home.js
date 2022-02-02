@@ -1,7 +1,6 @@
 import React from 'react';
 import { Layout, Message } from '../components';
 
-
 const Home = () => {
     return (
 

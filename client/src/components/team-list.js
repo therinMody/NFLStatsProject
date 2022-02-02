@@ -5,9 +5,9 @@ import { QueryData } from '../components';
 import TeamCard from '../containers/team-card';
 
 //gql to retrive the list of teams
-export const TEAMS = gql`
+const TEAMS = gql`
     query getTeams {
-        teamsForDisplay {
+        getTeams {
             Key
             City
             Name
@@ -20,18 +20,20 @@ export const TEAMS = gql`
 
 const TeamList = () => {
     const { loading, error, data } = useQuery(TEAMS);
+    console.log(data);
 
     return (
         <TeamContainer>
+            <h1>{data}...</h1>
             <QueryData loading={loading} error={error} data={data}>
-                {data?.teamsForDisplay?.map((team, index) => (
+                {data?.getTeams?.map((team, index) => (
                     <TeamCard key={team.Key} team={team} />
                 ))}
             </QueryData>
         </TeamContainer>
     );
 
-}
+};
 
 export default TeamList;
 
