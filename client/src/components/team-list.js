@@ -25,25 +25,32 @@ const TeamList = () => {
 
     return (
 
-        <>
+        <SectionContainer>
 
-        <TeamContainer>
-            <QueryData loading={loading} error={error} data={data}>
-                {data?.getTeams?.map((team) => (
-                    <TeamCard key={team.Key} team={team} />
-                ))}
-            </QueryData>
-        </TeamContainer>
+            <IndexHeader>National Football League Teams:</IndexHeader>
 
-        </>
+            <TeamContainer>
+                <QueryData loading={loading} error={error} data={data}>
+                    {data?.getTeams?.map((team) => (
+                        <TeamCard key={team.Key} team={team} />
+                    ))}
+                </QueryData>
+            </TeamContainer>
+
+        </SectionContainer>
     );
 
 };
 
 export default TeamList;
 
+const SectionContainer = styled.div({
+    marginTop: '150px'
+
+});
+
 const TeamContainer = styled.div({
-    width: '56%',
+    width: '66%',
     backgroundColor: '#141414',
     color: '#FFFFFF',
     float: 'right',
@@ -52,4 +59,15 @@ const TeamContainer = styled.div({
     marginTop: '1%',
     textAlign: 'center',
     marginRight: '3%',
+
+});
+
+const IndexHeader = styled.div({
+    color: '#F5F5F5',
+    fontSize: '250%',
+    marginLeft: '30%',
+    marginTop: '5%',
+    marginBotton: '5%',
+    width: '66%',
+    textAlign: 'center',
 });

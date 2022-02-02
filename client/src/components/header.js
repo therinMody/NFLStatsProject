@@ -22,6 +22,12 @@ const HeaderBar = styled.div({
     fontFamily: 'monospace',
     fontSize: '200%',
     border: '2px solid',
+    left: 0,
+    right: 0,
+    position: 'fixed',
+    top: 0,
+    width: '100%',
+    height: 'auto',
 });
 
 const Container = styled.div({

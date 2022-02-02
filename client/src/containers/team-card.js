@@ -6,6 +6,17 @@ const TeamCard = ({ team }) => {
     //destructure the team data
     const {City, Name, Division, Conference, WikipediaLogoUrl, PrimaryColor, SecondaryColor } = team;
 
+    let pColor = '#' + PrimaryColor;
+    let sColor = '#' + SecondaryColor;
+
+    const TeamContainer = styled.div({
+        padding: '1%',
+        marginBottom: '5%',
+        borderRadius: '1em',
+        backgroundColor: pColor,
+        color: sColor,
+    });
+
     return (
         <TeamContainer>
             <CardImageContainer>
@@ -23,12 +34,11 @@ const TeamCard = ({ team }) => {
 
 export default TeamCard;
 
-const TeamContainer = styled.div({
+/*const TeamContainer = styled.div({
     padding: '1%',
     marginBottom: '1%',
     borderRadius: '1em',
-    backgroundColor: 'grey'
-});
+});*/
 
 const CardImageContainer = styled.div({
 
@@ -36,11 +46,10 @@ const CardImageContainer = styled.div({
 
 const CardContent = styled.div({
     padding: '2%',
-    backgroundColor: '#000000'
 });
 
 const CardName= styled.div({
-    fontSize: '200%',
+    fontSize: '250%',
 });
 
 const CardConference= styled.div({
