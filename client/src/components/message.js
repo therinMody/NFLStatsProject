@@ -18,4 +18,5 @@ const MessageContainer = styled.div({
     padding: '2%',
     textAlign: 'center',
     width: '56%',
+    marginTop: '150px'
 });
