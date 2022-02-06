@@ -45,7 +45,7 @@ const TeamList = () => {
 export default TeamList;
 
 const SectionContainer = styled.div({
-    marginTop: '150px'
+    marginTop: '160px'
 
 });
 

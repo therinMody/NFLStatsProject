@@ -3,6 +3,7 @@ import { Router } from '@reach/router';
 /** importing our pages */
 import Home from './home';
 import Teams from './teams';
+import PlayerStats from './player';
 
 
 export default function Pages() {
@@ -10,6 +11,7 @@ export default function Pages() {
     <Router primary={false} component={Fragment}>
       <Home path="/" />
       <Teams path="/teams"/>
+      <PlayerStats path="/playerStats"/>
     </Router>
   );
 }

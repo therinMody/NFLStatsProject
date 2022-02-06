@@ -20,7 +20,7 @@ const FooterContainer = styled.div({
     padding: '0.01%',
     backgroundColor: '#000000',
     bottom: 0,
-    width: '99%',
+    width: '100%',
     position: 'fixed',
     border: '1px solid #707070',
     left: 0,
