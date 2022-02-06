@@ -17,6 +17,11 @@ class TrackAPI extends RESTDataSource {
     getTeams() {
         return this.get("Teams?key="+process.env.REACT_APP_SPORTS_DATA_API_KEY);
     }
+
+    //returns a list of teams
+    getPlayerStats(teamKey, week) {
+        return this.get(`PlayerGameStatsByTeam/2021REG/${week}/${teamKey}?key=`+process.env.REACT_APP_SPORTS_DATA_API_KEY);
+    }
 }
 
 module.exports = TrackAPI;

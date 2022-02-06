@@ -6,6 +6,10 @@ const resolvers = {
 
         getTeams: (_, __, {dataSources}) => {
             return dataSources.trackAPI.getTeams();
+        },
+
+        getPlayerStats: (_, {teamKey, week}, {dataSources}) => {
+            return dataSources.trackAPI.getPlayerStats(teamKey, week);
         }
     }
 };

@@ -7,6 +7,9 @@ type Query {
 
     "Query for retrieving all the teams in the NFL"
     getTeams:[Team!]!
+
+    "Query for getting list of players for one team and game"
+    getPlayerStats(teamKey: String!, week: Int!): [Player!]!
 }
 
 "A stadium"
@@ -29,6 +32,13 @@ type Team {
     WikipediaLogoUrl: String!
     PrimaryColor: String!
     SecondaryColor: String!
+}
+
+"A player"
+type Player {
+    Name: String!
+    Position: String!
+    PositionCategory: String!
 }
 `;
 
