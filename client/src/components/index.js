@@ -6,4 +6,5 @@ export {default as Message} from './message';
 export {default as TeamList} from './team-list';
 export { default as QueryData } from './query-data';
 export {default as PlayerContent} from './player-content';
+export {default as PlayerResults} from './player-results';
 

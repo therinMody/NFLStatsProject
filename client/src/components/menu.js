@@ -33,7 +33,7 @@ const Menu = () => {
                         </td>
                         <td>
                             <MenuLink to="/playerStats">
-                                <h2>Player Stats by <br /> Team & Week</h2>
+                                <h2>Players by <br /> Team & Week</h2>
                             </MenuLink>
                         </td>
                     </tr>

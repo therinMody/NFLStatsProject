@@ -2,6 +2,7 @@ import React from 'react';
 import styled from '@emotion/styled';
 import { useQuery, gql } from '@apollo/client';
 import { QueryData } from '../components';
+import { PlayerResults } from '../components';
 
 //gql to retrive the list of teams
 const TEAMS = gql`
@@ -28,7 +29,7 @@ const PlayerContent = () => {
     //let resultsFlag = false;
 
     var weeks = [];
-    for (var i=1; i < 19; i++) {
+    for (var i = 1; i < 19; i++) {
         weeks.push(i);
     }
 
@@ -37,12 +38,12 @@ const PlayerContent = () => {
     }
 
     function handleWeekChange() {
-        setWeek(document.getElementById("weekSelection").value);
+        setWeek(parseInt(document.getElementById("weekSelection").value));
     }
 
     return (
         <SectionContainer>
-            <IndexHeader>View Player Stats for 2021 Regular Season</IndexHeader>
+            <IndexHeader>View Players for 2021 Regular Season</IndexHeader>
 
             <br></br>
 
@@ -70,14 +71,15 @@ const PlayerContent = () => {
                             </select>
                         </td>
                     </tr>
-                </FormTable>       
+                </FormTable>
+
+                <hr></hr>
 
             </SelectionContainer>
 
-            <Results>
-                <h1>{team}</h1>
-                <h1>{week}</h1>
-            </Results>
+            
+
+            <PlayerResults team={team} week={week} />
 
         </SectionContainer>
     );
@@ -92,13 +94,13 @@ const SectionContainer = styled.div({
 });
 
 const IndexHeader = styled.div({
-    color: '#F5F5F5',
-    fontSize: '250%',
-    marginLeft: '30%',
-    marginTop: '5%',
-    marginBotton: '5%',
     width: '66%',
-    textAlign: 'center',
+    backgroundColor: '#141414',
+    color: '#FFFFFF',
+    float: 'right',
+    height: 'fit-content',
+    marginRight: '3%',
+    fontSize: '300%',
 });
 
 const SelectionContainer = styled.div({
@@ -107,7 +109,6 @@ const SelectionContainer = styled.div({
     color: '#FFFFFF',
     float: 'right',
     height: 'fit-content',
-    marginBottom: '10%',
     marginTop: '1%',
     textAlign: 'center',
     marginRight: '3%',
@@ -120,15 +121,3 @@ const FormTable = styled.table({
     width: '50%',
 });
 
-const Results = styled.div({
-    width: '66%',
-    backgroundColor: '#141414',
-    color: '#FFFFFF',
-    float: 'right',
-    height: 'fit-content',
-    marginBottom: '10%',
-    marginTop: '1%',
-    textAlign: 'center',
-    marginRight: '3%',
-    fontSize: '200%',
-});
