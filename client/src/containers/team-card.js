@@ -11,10 +11,15 @@ const TeamCard = ({ team }) => {
 
     const TeamContainer = styled.div({
         padding: '1%',
-        marginBottom: '5%',
+        width: '20%',
+        height: 'fit-content',
+        float: 'left',
+        margin: '5%',
+        height: '400px',
         borderRadius: '1em',
         backgroundColor: pColor,
         color: sColor,
+        
     });
 
     return (
@@ -33,12 +38,6 @@ const TeamCard = ({ team }) => {
 }
 
 export default TeamCard;
-
-/*const TeamContainer = styled.div({
-    padding: '1%',
-    marginBottom: '1%',
-    borderRadius: '1em',
-});*/
 
 const CardImageContainer = styled.div({
 
