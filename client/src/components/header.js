@@ -5,7 +5,7 @@ const Header = () => {
     return (
         <HeaderBar>
             <Container>
-                <h1>NFL Statistics</h1>
+                <h1>NFL Stuff</h1>
             </Container>
         </HeaderBar>
     );
