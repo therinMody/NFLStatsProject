@@ -29,7 +29,7 @@ const TeamCard = ({ team }) => {
                 <img width='200px' height='200px' src={WikipediaLogoUrl} alt={Name} />
             </CardImageContainer>
             <CardContent>
-                <CardName>{City} {Name}</CardName>
+                <CardName>{City} <br /> {Name}</CardName>
                 <CardConference>{Conference}</CardConference>
                 <CardDivision>{Division}</CardDivision>
             </CardContent>
