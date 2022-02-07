@@ -36,6 +36,7 @@ type Team {
 
 "A player"
 type Player {
+    PlayerID: Int!
     Name: String!
     Position: String!
     PositionCategory: String!
